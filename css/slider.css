@@ -1,0 +1,76 @@
+#blackslider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  z-index: 1;
+  list-style-type: none;
+  /*-webkit-box-shadow: 0 10px 24px rgba(37,37,37,.35);*/
+  -moz-box-shadow: 0 10px 24px rgba(37, 37, 37, 0.35);
+  /* box-shadow: 0 10px 24px rgba(37,37,37,.35);*/
+  margin-bottom: 65px;
+  margin-top: -30px;
+}
+#blackslider:before {
+  content: "";
+  right: -5px;
+  height: 100%;
+  width: 5px;
+  bottom: -2px;
+  transform: skewY(45deg);
+  background-color: #bbbbbb;
+  position: absolute;
+  transition: 0.2s ease;
+}
+#blackslider:after {
+  content: "";
+  height: 5px;
+  width: 100%;
+  transform: skewX(45deg);
+  background-color: #bbbbbb;
+  display: block;
+  position: absolute;
+  left: 2px;
+  bottom: -4px;
+  transition: 0.2s ease;
+}
+.slide {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
+.slide {
+  z-index: 9999999;
+  font-size: 25px;
+  box-sizing: border-box;
+  background: #29292d;
+  color: #fff;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.slide:nth-of-type(1) > .img-sld {
+  background-color: #252525;
+  background-image: url("../photos/laser1.jpeg");
+}
+.slide:nth-of-type(2) > .img-sld {
+  background-color: #252525;
+  background-image: url("../photos/laser2.jpeg");
+}
+.slide:nth-of-type(3) > .img-sld {
+  background-color: #252525;
+  background-image: url("../photos/laser3.jpeg");
+}

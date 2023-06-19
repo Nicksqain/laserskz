@@ -462,6 +462,7 @@ header {
 }
 .promo__welcome .right__side .title {
   color: #8a8a8a;
+  margin-bottom: 50px;
 }
 .promo__welcome .right__side .subtitle {
   display: flex;

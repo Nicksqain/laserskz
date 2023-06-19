@@ -136,6 +136,11 @@ nav .nav__menu > ul > li > a.dropdown.show::after {
 }
 nav .nav__menu .contact__address {
   font-family: "Poppins", sans-serif;
+  display: flex;
+  align-self: center;
+}
+nav .nav__menu .contact__address img {
+  margin-right: 10px;
 }
 nav .nav__menu > .nav__links {
   display: flex;
@@ -784,3 +789,28 @@ footer .container {
   margin-right: 10px;
 }
 /* FOOTER */
+@media screen and (max-width: 960px) {
+  .nav__menu {
+    display: block; /* Изменяем display на block */
+    padding: 40px 0;
+    align-items: center;
+  }
+
+  .nav__menu > * {
+    margin-bottom: 20px; /* Добавляем отступ между элементами меню */
+  }
+  nav .logo {
+    flex-direction: column;
+  }
+  nav .nav__menu .contact__address {
+    text-align: center;
+    justify-content: center;
+  }
+  nav .nav__menu ul {
+    margin: 30px 0;
+  }
+  nav .nav__menu > .nav__links {
+    justify-content: center;
+    margin-left: 0;
+  }
+}

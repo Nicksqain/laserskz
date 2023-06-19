@@ -33,13 +33,16 @@
           </a>
 
           <ul>
-            <li><a href="#" class="link">Лазеры</a></li>
+            <li><a href="#lasers" class="link">Лазеры</a></li>
             <!-- <li>
               <a href="#" class="link dropdown">Выпад</a>
             </li> -->
-            <li><a href="#" class="link">Контакты</a></li>
+            <li><a href="#contacts" class="link">Контакты</a></li>
           </ul>
-          <div class="contact__address">Алматы, ул.Бокейханова, 510Б</div>
+          <div class="contact__address">
+            <img src="./assets/icons/Map_Pin.svg" alt="" />
+            <span>Алматы, ул.Бокейханова, 510Б</span>
+          </div>
           <div class="nav__links">
             <a href=""><div class="social__link"></div></a>
             <a href=""><div class="social__link"></div></a>
@@ -162,7 +165,7 @@
 
       <!-- ЛАЗЕРЫ -->
       <div class="wrapper">
-        <div class="products devices">
+        <div id="lasers" class="products devices">
           <!-- ЛАЗЕР -->
           <div class="devices-item">
             <div class="devices-content flex">
@@ -441,7 +444,11 @@
               >
             </div>
           </div> -->
-          <div class="footer__block" style="width: 100%; margin-right: 0">
+          <div
+            id="contacts"
+            class="footer__block"
+            style="width: 100%; margin-right: 0"
+          >
             <h2>Контакты</h2>
             <div class="contacts">
               <table>
@@ -487,8 +494,6 @@
       </div>
     </footer>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-    <script src="./misc.js"></script>
     <script src="./scripts/slider.js"></script>
-    <script src="./tabs.js"></script>
   </body>
 </html>

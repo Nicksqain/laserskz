@@ -40,29 +40,37 @@ Array.from(dropdownButtons).map((e) => {
 
 // #1
 let timetableDropdown = document.querySelector("#timetable .image__block");
-timetableDropdown.ontransitionstart = (e) => {
-  if (e.propertyName == "transform") {
-    let i = 0;
-    let x = setInterval(() => {
-      if (i == intelDropItems.length) {
-        clearInterval(x);
-      }
-      intelDropItems[i].style.transform = "";
-      i++;
-      if (i == intelDropItems.length) {
-        clearInterval(x);
-      }
-    }, 100);
-  }
-};
+if (timetableDropdown) {
+  timetableDropdown.ontransitionstart = (e) => {
+    if (e.propertyName == "transform") {
+      let i = 0;
+      let x = setInterval(() => {
+        if (i == intelDropItems.length) {
+          clearInterval(x);
+        }
+        intelDropItems[i].style.transform = "";
+        i++;
+        if (i == intelDropItems.length) {
+          clearInterval(x);
+        }
+      }, 100);
+    }
+  };
+}
+
 // #2
 
-let observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-      entry.isIntersecting ? entry.target.classList.replace('to-left', 'to-right') : entry.target.classList.replace('to-right', 'to-left')
-  })
-}, {
-  threshold: .5
-})
+let observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      entry.isIntersecting
+        ? entry.target.classList.replace("to-left", "to-right")
+        : entry.target.classList.replace("to-right", "to-left");
+    });
+  },
+  {
+    threshold: 0.5,
+  }
+);
 
-observer.observe(document.querySelector('img'))
+observer.observe(document.querySelector("img"));

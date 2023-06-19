@@ -538,6 +538,7 @@ header {
   color: #1e1e22;
   font-weight: 700;
   font-size: 18px;
+  text-align: center;
   font-family: "Roboto", sans-serif;
   background-color: #73f190;
   border-bottom: 3px solid #4f9c61;
@@ -878,7 +879,7 @@ footer .container {
   .promo__welcome .right__side .container .buttons {
     flex-direction: column;
   }
-  .promo__welcome .right__side .container .buttons button {
+  .promo__welcome .right__side .container .buttons a {
     margin-bottom: 20px;
   }
 }

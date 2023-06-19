@@ -75,7 +75,10 @@ nav .logo__labels {
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+}
+nav .logo__labels .logo__text {
+  width: 20ch;
 }
 nav .logo__labels .logo__text:nth-child(1) {
   color: #000;
@@ -727,7 +730,7 @@ footer {
 }
 footer .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-family: "Montserrat";
 }
 .footer__block {
@@ -759,10 +762,11 @@ footer .container {
   color: #565656;
 }
 .footer__block .contacts {
-  padding: 20px;
+  padding: 50px;
   border-radius: 5px;
   background-color: #202020;
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -770,6 +774,9 @@ footer .container {
   padding-right: 10px;
   padding-bottom: 20px;
   color: #fff;
+}
+.footer__block .contacts table {
+  margin-right: 100px;
 }
 .footer__block .contacts tr td:nth-of-type(1) {
   font-weight: 600;
@@ -789,7 +796,26 @@ footer .container {
   margin-right: 10px;
 }
 /* FOOTER */
-@media screen and (max-width: 960px) {
+.sales-place {
+  display: flex;
+  flex-direction: column;
+}
+.sales-place h3 {
+  color: #fff;
+  font-size: 15px;
+}
+.footer__item {
+  display: flex;
+  margin-bottom: 20px;
+}
+.footer__item .name {
+  color: rgb(170, 170, 170);
+  margin-right: 10px;
+}
+.footer__item span {
+  color: #3b974e;
+}
+@media screen and (max-width: 1181px) {
   .nav__menu {
     display: block; /* Изменяем display на block */
     padding: 40px 0;
@@ -802,6 +828,12 @@ footer .container {
   nav .logo {
     flex-direction: column;
   }
+  nav .logo .logo__labels {
+    align-items: center;
+  }
+  nav .logo .logo__labels .logo__text {
+    width: auto;
+  }
   nav .nav__menu .contact__address {
     text-align: center;
     justify-content: center;
@@ -812,5 +844,58 @@ footer .container {
   nav .nav__menu > .nav__links {
     justify-content: center;
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 1221px) {
+  .promo__welcome {
+    height: 1200px;
+  }
+  .promo__welcome .right__side .title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .slide {
+    flex-direction: column !important;
+  }
+  .promo__welcome .left__side,
+  .promo__welcome .right__side {
+    height: 50%;
+    width: 100%;
+  }
+  .promo__welcome .right__side .container {
+    width: 100%;
+    padding: 30px;
+  }
+  .promo__welcome .right__side .container .description {
+    font-size: 13px;
+  }
+  .alert__block .left {
+    width: 100%;
+  }
+  .alert__block .left h1 {
+    font-size: 19px;
+  }
+  .promo__welcome .right__side .container .buttons {
+    flex-direction: column;
+  }
+  .promo__welcome .right__side .container .buttons button {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 761px) {
+  .alert__block {
+    flex-direction: column;
+    align-items: start;
+  }
+  .alert__block .right button {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 731px) {
+  .slide {
+    width: auto;
+  }
+  .footer__block .contacts tr td {
+    font-size: 12px;
   }
 }

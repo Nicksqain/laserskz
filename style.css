@@ -707,8 +707,9 @@ header {
   color: #343434;
   font-weight: 500;
 }
-.alert__block button {
+.alert__block a {
   font-family: "Montserrat", sans-serif;
+  color: #01130f;
   font-weight: 600;
   font-size: 15px;
   padding: 25px 40px;
@@ -721,7 +722,7 @@ header {
 .alert__block:hover h1 {
   color: #17181b;
 }
-.alert__block:hover button {
+.alert__block:hover a {
   cursor: pointer;
   background-color: #17181b;
   color: #fff;
